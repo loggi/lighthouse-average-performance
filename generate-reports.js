@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 const execSync = require('child_process').execSync;
-const url = 'https://7da41fee.ngrok.io';
+
+const appUrl = 'https://7da41fee.ngrok.io';
 const reportOutputDir = 'hotjar';
 const howManyReports = 10; // Change this to be the number of tests you want to do
 
@@ -11,7 +12,7 @@ for (let i = 0; i < howManyReports; i++) {
   try {
     execSync(
       `cd ${reportOutputDir} && ` +
-        `lighthouse ${url} --output json --output html --only-categories=performance --quiet --chrome-flags="--headless"`
+        `lighthouse ${appUrl} --output json --output html --only-categories=performance --quiet --chrome-flags="--headless"`
     );
   } catch (err) {
     console.log(`Performance test ${i + 1} failed`);

@@ -1,14 +1,16 @@
 #!/usr/bin/env node
-const dir = 'hotjar';
-const normalizedPath = require('path').join(__dirname, dir);
+
+const reportsInputDir = 'hotjar';
+
+const normalizedPath = require('path').join(__dirname, reportsInputDir);
 const reports = [];
 
 require('fs')
   .readdirSync(normalizedPath)
   .forEach(file => {
     if (file.endsWith('json')) {
-      console.log(`Importing file ${dir}/${file}...`);
-      const report = require(`./${dir}/${file}`);
+      console.log(`Importing file ${reportsInputDir}/${file}...`);
+      const report = require(`./${reportsInputDir}/${file}`);
       reports.push(report);
     }
   });
