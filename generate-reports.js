@@ -4,7 +4,7 @@ const execSync = require('child_process').execSync;
 
 const appUrl = 'https://7da41fee.ngrok.io';
 const reportOutputDir = process.argv[2] || 'hotjar';
-const howManyReports = 10; // Change this to be the number of tests you want to do
+const howManyReports = 20; // Change this to be the number of tests you want to do
 
 console.log(`Reports will be delivered on directory ${reportOutputDir}`);
 for (let i = 0; i < howManyReports; i++) {
