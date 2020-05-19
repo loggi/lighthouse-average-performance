@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const reportsInputDir = 'baseline10';
+const reportsInputDir = process.argv[2] || 'baseline10';
 
 const normalizedPath = require('path').join(__dirname, reportsInputDir);
 const reports = [];
