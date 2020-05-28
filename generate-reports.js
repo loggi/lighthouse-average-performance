@@ -3,8 +3,8 @@
 const execSync = require('child_process').execSync;
 
 const appUrl = process.env.APP_URL;
-const reportOutputDir = 'hotjar';
-const howManyReports = 10; // Change this to be the number of tests you want to do
+const reportOutputDir = process.argv[2] || 'hotjar';
+const howManyReports = 20; // Change this to be the number of tests you want to do
 
 console.log(`Reports will be delivered on directory ${reportOutputDir}`);
 for (let i = 0; i < howManyReports; i++) {

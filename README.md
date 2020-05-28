@@ -32,3 +32,13 @@ chmod +x parse-reports.js
 APP_URL="my-custom-url" ./generate-reports.js
 APP_URL="my-custom-url" ./parse-reports.js
 ```
+
+## Useful Links
+
+- [Lighthouse Report Viewer](https://googlechrome.github.io/lighthouse/viewer/),
+  drop a json report and see it in a more human-readable format.
+- [Lighthouse Metric Variability and
+  Accuracy](https://docs.google.com/document/d/1BqtL-nG53rxWOI5RO0pItSRPowZVnYJ_gBEQCJ5EeUE/edit?usp=sharing)
+- [The Magic of Running Multiple Lighthouse Performance Tests on
+  macOS](https://medium.com/@iamasamanthaa/the-magic-of-running-multiple-lighthouse-performance-tests-on-macos-4d22ae56621c),
+  the first script was based on this article.
