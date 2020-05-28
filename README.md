@@ -29,8 +29,8 @@ To run the scripts, you can do:
 chmod +x generate-reports.js # give the file permission to be executed
 chmod +x parse-reports.js
 
-./generate-reports.js
-./parse-reports.js
+APP_URL="my-custom-url" ./generate-reports.js
+APP_URL="my-custom-url" ./parse-reports.js
 ```
 
 ## Useful Links
