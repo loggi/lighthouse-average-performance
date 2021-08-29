@@ -27,7 +27,7 @@ const calculateAverageForAudit = (reports, audit) => {
   const baseAudit = {
     ...reports[0].audits[audit]
   };
-  const getPropertyForAuditItem = item => report => report.audits[audit][item];
+  const getPropertyForAuditItem = item => report => (report.audits[audit] || {})[item];
   baseAudit.score = calculateAverageInArray(
     reports,
     getPropertyForAuditItem('score')
