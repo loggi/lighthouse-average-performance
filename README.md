@@ -26,9 +26,6 @@ At the top of each script, there are variables you should customize to use them.
 To run the scripts, you can do:
 
 ```sh
-chmod +x generate-reports.js # give the file permission to be executed
-chmod +x parse-reports.js
-
 APP_URL="my-custom-url" ./generate-reports.js
 APP_URL="my-custom-url" ./parse-reports.js
 ```

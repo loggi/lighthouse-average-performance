@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const reportsInputDir = process.argv[2] || 'baseline10';
+const reportsInputDir = process.argv[2] || 'hotjar';
 
 const normalizedPath = require('path').join(__dirname, reportsInputDir);
 const reports = [];
@@ -27,7 +27,7 @@ const calculateAverageForAudit = (reports, audit) => {
   const baseAudit = {
     ...reports[0].audits[audit]
   };
-  const getPropertyForAuditItem = item => report => report.audits[audit][item];
+  const getPropertyForAuditItem = item => report => (report.audits[audit] || {})[item];
   baseAudit.score = calculateAverageInArray(
     reports,
     getPropertyForAuditItem('score')
